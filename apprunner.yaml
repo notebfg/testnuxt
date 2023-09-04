@@ -1,18 +1,11 @@
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm install
+version: 1.0
+runtime: nodejs18 
+build:
+  commands:
     build:
-      commands:
-        - npm run generate
-    
-  artifacts:
-    # IMPORTANT - Please verify your build output directory
-    baseDirectory: .output/public
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
+      - npm install
+  
+run: 
+  command: npm run dev
+  network:
+    port: 3000
