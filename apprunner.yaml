@@ -6,6 +6,6 @@ build:
       - npm --production
       - npm build
 run: 
-  command: npm start
+  command: npm run generate
   network:
     port: 3000
