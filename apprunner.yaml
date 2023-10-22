@@ -3,9 +3,8 @@ runtime: nodejs16
 build:
   commands:
     build:
-      - npm --production
-      - npm build
+      - npm run build
 run: 
-  command: npm run generate
+  command: npm run dev
   network:
     port: 3000
